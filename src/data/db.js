@@ -7,12 +7,12 @@ const STORAGE_KEY = 'payperiod_data_v1';
 const EMAIL_KEY = 'payparty_email_for_signin';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyOy9dP9Ile3wKJA-GQvD4skX1RIEr6gOMA",
-    authDomain: "payparty-f4719.firebaseapp.com",
-    projectId: "payparty-f4719",
-    storageBucket: "payparty-f4719.firebasestorage.app",
-    messagingSenderId: "208954701161",
-    appId: "1:208954701161:web:5aa086dca5d1bf6f52f9f8"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 let app = null;
