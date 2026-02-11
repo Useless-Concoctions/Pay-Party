@@ -15,7 +15,10 @@
   <div id="app"></div>
   <script>
     window.addEventListener('error', function (e) {
-      document.body.innerHTML += '<div style="color:red; padding:20px; background:white;">Error: ' + e.message + '</div>';
+      document.body.innerHTML += '<div style="color:red; padding:20px; background:white; border:1px solid red; margin:10px;">Runtime Error: ' + e.message + '</div>';
+    });
+    window.addEventListener('unhandledrejection', function (e) {
+      document.body.innerHTML += '<div style="color:red; padding:20px; background:white; border:1px solid red; margin:10px;">Async Error: ' + (e.reason ? e.reason.message : e.reason) + '</div>';
     });
   </script>
   <script type="module" src="/src/main.js"></script>
